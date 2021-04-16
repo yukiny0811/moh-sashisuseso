@@ -1,0 +1,4 @@
+div
+  p test
+  - @photo.each do |p|
+    img src="#{convert_image_source(p.data)}"
