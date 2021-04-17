@@ -2,3 +2,5 @@ div
   p test
   - @photo.each do |p|
     img src="#{convert_image_source(p.data)}"
+    / img src="#{p.data}"
+    / <script>console.log("#{p.data}")</script>
