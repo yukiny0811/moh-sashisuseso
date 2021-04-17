@@ -88,7 +88,7 @@ get "/append_readyphoto/:photo_id" do
 end
 
 get "/get_first_readyphoto" do
-  if Readyphoto.all.first.present?
+  if Readyphoto.all.first != nil
     id = Readyphoto.all.first.photo_id
     image = Photo.find_by(id: id)
     data = image.data
