@@ -102,7 +102,7 @@ get "/get_first_readyphoto" do
     content_type 'application/octet-stream'
     return data
   else 
-    return "none"
+    a = 1/0
   end
 end
 
