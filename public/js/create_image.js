@@ -69,9 +69,11 @@ function sendData() {
   //     buffer[i] = bin.charCodeAt(i);
   // }
 
+  let name = $("#gayaName").val();
   var formData = new FormData();
   
   formData.append("file", data);
+  formData.append("name", name);
   var xhr = new XMLHttpRequest();
   xhr.open( "POST", "/send_created_image" , true);
   
@@ -104,6 +106,9 @@ function sendData() {
   //     }
   // };
   // $.ajax(request);
+  
+  
+  
 }
 
 

@@ -75,6 +75,7 @@ post "/send_created_image" do
   # logger.info params[:file][:tempfile]
   Photo.create(
     data: Base64.decode64(params[:file])
+    # name: params[:name]
   )
 end
 
