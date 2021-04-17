@@ -88,9 +88,11 @@ get "/append_readyphoto/:photo_id" do
 end
 
 post "/append_readyphoto/:photo_id" do
-  Readyphoto.create(
-    photo_id: 1
-  )
+  if Photo.find_by(id: params[:photo_id]).present?
+    Readyphoto.create(
+      photo_id: params[:photo_id]
+    )
+  end
 end
 
 get "/get_first_readyphoto" do
