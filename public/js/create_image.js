@@ -118,7 +118,7 @@ function drawGaya() {
 
   context.textAlign = "center";
 
-  context.font = "32px 'kagaku'";
+  context.font = "52px 'kagaku'";
   context.fillStyle="rgb(33, 33, 33)";
-  context.fillText(text, 100, 110);
+  context.fillText(text, 125, 138);
 }
