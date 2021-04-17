@@ -114,6 +114,8 @@ function sendData() {
 
 
 function drawGaya() {
+  
+  console.log("test");
   var bubbleImg = new Image();
   bubbleImg.src = "img/bubble.png";
   

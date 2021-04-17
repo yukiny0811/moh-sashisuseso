@@ -110,3 +110,8 @@ get "/stamplist" do
   @stamps = Photo.all
   slim :stamplist
 end
+
+get "/main" do
+  @stamps = Photo.all
+  slim :main
+end

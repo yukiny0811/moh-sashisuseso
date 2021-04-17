@@ -1,24 +1,22 @@
 html lang="ja"
-  head
+  head 
     meta charset="utf-8"
+    title ガヤメーカー
+    link rel="shortcut icon" href="img/favicon.ico"
+    link rel="stylesheet" type="text/css" href="css/slick.css"
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    meta name="viewport" content="width=device-width,initial-scale=1"
     / link rel="preconnect" href="https://fonts.gstatic.com"
     / link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet"
     / <style>@font-face{font-family: 'kagaku';src: url('GN-KagakuGothic.ttf') format('truetype');}*{font-family: 'kagaku';}</style>
-    <style>.list-img{border: 1px solid red;}</style>
+    
     link rel="stylesheet" href="css/main.css"
   body
-    script src="https://code.jquery.com/jquery-3.6.0.min.js"
     .allContainer
-      .titleImageContainer
-        img src="img/haikei-big.png"
-      div
-        h1 開発用まとめリンク
-        a href="/create_image" 新しいスタンプ生成
-        a href="/stamplist" スタンプ投稿
-        p ---
-        p ---
-        p ---
-        p ---
-        p ---
       == yield
-    
+    script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    script type="text/javascript" src="js/slick.min.js"
+    script type="text/javascript" src="js/common.js"
+    script type="text/javascript" src="js/swiper.min.js"
+    script src="js/create_image.js" 
+    script src="js/send.js"

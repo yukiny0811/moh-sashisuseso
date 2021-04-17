@@ -1,6 +1,9 @@
 
 
 $(document).on("click", ".list-img", function(e) {
+  
+  console.log("test");
+  
   let id = parseInt($(this).attr("id"));
   console.log(id);
   
@@ -13,4 +16,17 @@ $(document).on("click", ".list-img", function(e) {
       }
   };
   $.ajax(request);
+});
+
+$('.single-item').slick({
+    autoplay: true,
+    dots: true,
+    arrows: true,
+});
+
+$(function() {
+    var loader = $('.loader-wrap');
+    setTimeout(function() {
+        loader.fadeOut();
+    }, 3000);
 });

@@ -1,0 +1,36 @@
+
+
+/ .loader-wrap
+/   .loader Loading...
+#header 
+.main-wrapper 
+  .main-visual 
+    img src="img/haikei.png"
+  section class="make"
+    .wrapper 
+      .haikei
+        img src="img/make_haikei.png"
+      .make_content 
+        img src="img/make.png"
+      .make_template
+        canvas id="canvas" width="250" height="250"
+        .make_form
+          .top 
+            p 文字を入力
+            input type="text" size="20" maxlength="20" id="gayaText"
+          a id="change" class="button" onclick="drawGaya();" プレビュー
+          .botton
+            / p 画像を選択
+            / a class="button" href="" ファイル
+      .make_send
+        a id="send" class="btn_design" onclick="sendData();" 送信
+  section class="send"
+    .wrapper 
+      .haikei
+      .send_content
+        img src="img/send.png"
+      .box
+        - @stamps.each do |s|
+            a class="sendStamp"
+              img src="#{convert_image_source(s.data)}" class="list-img" id="#{s.id}-stamp"
+
