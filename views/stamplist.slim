@@ -1,0 +1,5 @@
+div
+  - @stamps.each do |s|
+    a class="sendStamp"
+      img src="#{convert_image_source(s.data)}" class="list-img" id="#{s.id}-stamp"
+  script src="js/send.js"

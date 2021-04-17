@@ -87,15 +87,27 @@ get "/append_readyphoto/:photo_id" do
   )
 end
 
+post "/append_readyphoto/:photo_id" do
+  Readyphoto.create(
+    photo_id: 1
+  )
+end
+
 get "/get_first_readyphoto" do
-  if Readyphoto.all.first != nil
+  if Readyphoto.all.first.present?
     id = Readyphoto.all.first.photo_id
     image = Photo.find_by(id: id)
     data = image.data
-    Readyphoto.find_by(id: id).destroy
+    Readyphoto.all.first.destroy
     content_type 'application/octet-stream'
     return data
   else 
     return "none"
   end
+end
+
+
+get "/stamplist" do
+  @stamps = Photo.all
+  slim :stamplist
 end
