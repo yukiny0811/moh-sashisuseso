@@ -11,9 +11,9 @@ bubbleImg.src = "img/bubble.png";
 context.textAlign = "center";
 
 // context.font = "32px serif";R
-context.font = "32px 'kagaku'";
+context.font = "52px 'kagaku'";
 context.fillStyle="rgb(33, 33, 33)";
-context.fillText("さすが！", 100, 110);
+context.fillText("さすが！", 125, 138);
 
 // context.beginPath();
 // context.fillStyle="red";

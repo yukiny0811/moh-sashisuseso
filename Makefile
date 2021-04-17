@@ -8,3 +8,7 @@ create:
 	bundle exec rake db:create_migration NAME=${NAME}
 seed:
 	bundle exec rake db:seed
+push:
+	git add .
+	git commit -m "asdas"
+	git push origin master
