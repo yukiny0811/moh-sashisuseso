@@ -11,7 +11,7 @@ bubbleImg.src = "img/bubble.png";
 context.textAlign = "center";
 
 // context.font = "32px serif";R
-context.font = "32px 'Rock Salt'";
+context.font = "32px 'kagaku'";
 context.fillStyle="rgb(33, 33, 33)";
 context.fillText("さすが！", 100, 110);
 
@@ -118,7 +118,7 @@ function drawGaya() {
 
   context.textAlign = "center";
 
-  context.font = "32px serif";
+  context.font = "32px 'kagaku'";
   context.fillStyle="rgb(33, 33, 33)";
   context.fillText(text, 100, 110);
 }
