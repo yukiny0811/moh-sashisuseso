@@ -64,8 +64,6 @@ get "/getimage/:photo_id" do
   # data
 end
 
-
-
 get "/create_image" do
   slim :create_image
 end
@@ -79,7 +77,6 @@ post "/send_created_image" do
     data: Base64.decode64(params[:file])
   )
 end
-
 
 get "/append_readyphoto/:photo_id" do
   Readyphoto.create(
@@ -107,7 +104,6 @@ get "/get_first_readyphoto" do
     return "none"
   end
 end
-
 
 get "/stamplist" do
   @stamps = Photo.all

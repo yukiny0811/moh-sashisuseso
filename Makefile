@@ -12,3 +12,5 @@ push:
 	git add .
 	git commit -m "asdas"
 	git push origin master
+log:
+	heroku logs --tail
