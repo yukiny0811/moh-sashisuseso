@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_132910) do
+ActiveRecord::Schema.define(version: 2021_04_17_064305) do
 
   create_table "photos", force: :cascade do |t|
     t.binary "data"
+  end
+
+  create_table "readyphotos", force: :cascade do |t|
+    t.integer "photo_id"
   end
 
 end

@@ -4,6 +4,7 @@ require 'sinatra/cookies'
 # load models
 require "./models/models.rb"
 require "./models/photodata.rb"
+require "./models/readyphoto.rb"
 
 # load modules
 require "sass"

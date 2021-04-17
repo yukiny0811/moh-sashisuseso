@@ -64,6 +64,8 @@ get "/getimage/:photo_id" do
   # data
 end
 
+
+
 get "/create_image" do
   slim :create_image
 end
@@ -76,4 +78,24 @@ post "/send_created_image" do
   Photo.create(
     data: Base64.decode64(params[:file])
   )
+end
+
+
+get "/append_readyphoto/:photo_id" do
+  Readyphoto.create(
+    photo_id: 1
+  )
+end
+
+get "/get_first_readyphoto" do
+  if Readyphoto.all.first.present?
+    id = Readyphoto.all.first.photo_id
+    image = Photo.find_by(id: id)
+    data = image.data
+    Readyphoto.find_by(id: id).destroy
+    content_type 'application/octet-stream'
+    return data
+  else 
+    return "none"
+  end
 end
